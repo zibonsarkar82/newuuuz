@@ -3,32 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Platform - Post</title>
+  <title>Tic-Tac-Toe Game</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>My Blog</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="post.html">Posts</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="blog-detail">
-      <h2 id="post-title">Loading Blog Post...</h2>
-      <img id="post-image" src="" alt="Blog Image">
-      <p id="post-content">Loading content...</p>
-      <a href="index.html">Back to Home</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2023 My Blog. All rights reserved.</p>
-  </footer>
+  <div class="game-container">
+    <h1>Tic-Tac-Toe</h1>
+    <div class="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <p class="status">Player X's turn</p>
+    <button class="btn" onclick="resetGame()">Reset Game</button>
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
