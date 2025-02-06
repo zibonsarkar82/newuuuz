@@ -1,80 +1,50 @@
-// Sample news data
-const newsData = [
+// Sample blog data
+const blogData = [
   {
     id: 1,
-    title: "Major Earthquake Hits Region",
+    title: "The Future of Artificial Intelligence",
     image: "https://via.placeholder.com/600x400",
-    content: "A powerful earthquake has struck the region, causing widespread damage. Rescue operations are underway, and authorities are assessing the impact."
+    content: "Artificial Intelligence (AI) is no longer a futuristic concept; it's here and transforming industries. From healthcare to finance, AI is revolutionizing how we work and live. In this post, we explore the latest advancements in AI and what the future holds for this groundbreaking technology."
   },
   {
     id: 2,
-    title: "Election Results Announced",
+    title: "Top Travel Destinations for 2023",
     image: "https://via.placeholder.com/600x400",
-    content: "The final results of the national elections have been declared. The winning party has promised to focus on economic growth and social welfare."
+    content: "2023 is shaping up to be an exciting year for travel. From the pristine beaches of Bali to the historic streets of Rome, there's something for everyone. In this post, we highlight the top destinations you should consider for your next adventure."
   },
   {
     id: 3,
-    title: "New COVID Variant Detected",
+    title: "Healthy Eating Habits for a Better Life",
     image: "https://via.placeholder.com/600x400",
-    content: "Scientists have identified a new variant of the COVID-19 virus. Health officials are urging the public to remain cautious and get vaccinated."
+    content: "Eating healthy doesn't have to be complicated. By making small changes to your diet, you can improve your overall well-being. In this post, we share practical tips and recipes to help you get started on your journey to a healthier lifestyle."
   },
   {
     id: 4,
-    title: "Stock Market Hits Record High",
+    title: "The Rise of Remote Work",
     image: "https://via.placeholder.com/600x400",
-    content: "The stock market has reached an all-time high this week. Analysts attribute the surge to strong corporate earnings and positive economic indicators."
+    content: "Remote work has become the new norm for many professionals. In this post, we discuss the benefits and challenges of working from home, as well as tips for staying productive and maintaining a healthy work-life balance."
   },
   {
     id: 5,
-    title: "Climate Summit Concludes",
+    title: "Sustainable Living: Tips for Beginners",
     image: "https://via.placeholder.com/600x400",
-    content: "Global leaders have agreed on new measures to combat climate change. The summit focused on reducing carbon emissions and promoting renewable energy."
-  },
-  {
-    id: 6,
-    title: "Tech Giant Launches New Product",
-    image: "https://via.placeholder.com/600x400",
-    content: "A leading tech company has unveiled its latest innovation. The new product promises to revolutionize the way we interact with technology."
-  },
-  {
-    id: 7,
-    title: "Sports Team Wins Championship",
-    image: "https://via.placeholder.com/600x400",
-    content: "The local team has won the national championship title. Fans are celebrating the historic victory across the city."
-  },
-  {
-    id: 8,
-    title: "New Education Policy Announced",
-    image: "https://via.placeholder.com/600x400",
-    content: "The government has introduced a new policy for schools and colleges. The policy aims to improve access to quality education for all students."
-  },
-  {
-    id: 9,
-    title: "Celebrity Wedding Breaks the Internet",
-    image: "https://via.placeholder.com/600x400",
-    content: "Fans are buzzing about the lavish wedding of a famous celebrity. The event was attended by top stars and featured stunning performances."
-  },
-  {
-    id: 10,
-    title: "Space Mission Successfully Launched",
-    image: "https://via.placeholder.com/600x400",
-    content: "A new space mission has been launched to explore distant planets. Scientists hope to gather valuable data about the universe."
+    content: "Living sustainably is easier than you think. In this post, we provide simple steps you can take to reduce your environmental footprint, from reducing waste to conserving energy. Start your journey to a more eco-friendly lifestyle today!"
   }
 ];
 
-// Get the news ID from the URL
+// Get the blog post ID from the URL
 const urlParams = new URLSearchParams(window.location.search);
-const newsId = urlParams.get('id');
+const postId = urlParams.get('id');
 
-// Find the news item in the data
-const newsItem = newsData.find(item => item.id === parseInt(newsId));
+// Find the blog post in the data
+const blogPost = blogData.find(item => item.id === parseInt(postId));
 
-// Display the news details
-if (newsItem) {
-  document.getElementById('news-title').textContent = newsItem.title;
-  document.getElementById('news-image').src = newsItem.image;
-  document.getElementById('news-content').textContent = newsItem.content;
+// Display the blog post details
+if (blogPost) {
+  document.getElementById('post-title').textContent = blogPost.title;
+  document.getElementById('post-image').src = blogPost.image;
+  document.getElementById('post-content').textContent = blogPost.content;
 } else {
-  document.getElementById('news-title').textContent = "News Not Found";
-  document.getElementById('news-content').textContent = "The requested news item could not be found.";
+  document.getElementById('post-title').textContent = "Blog Post Not Found";
+  document.getElementById('post-content').textContent = "The requested blog post could not be found.";
 }
